@@ -1,4 +1,5 @@
 import ListingCard from "../ListingCard";
+import "../../styles/Section3.css";
 
 export default function Section3() {
   const DummyData = [
@@ -139,27 +140,10 @@ export default function Section3() {
 
   return (
     <>
-      <div
-        style={{
-          color: "black",
-          fontSize: 46,
-          fontFamily: "Gotham",
-          fontWeight: "700",
-          letterSpacing: 4.6,
-          wordWrap: "break-word",
-          maxWidth: 373,
-        }}
-      >
-        Available <br></br> Rentals{" "}
+      <div className="section-title">
+        Available <br /> Rentals
       </div>
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(5, 1fr)", 
-          gap: "20px", 
-          padding: "20px", 
-        }}
-      >
+      <div className="listing-grid">
         {DummyData.map((item) => (
           <ListingCard key={item.id} product={item} />
         ))}
