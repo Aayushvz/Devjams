@@ -1,4 +1,5 @@
 import Section3 from "../../components/Landing/Section3";
+import Section2 from "../../components/Landing/Section2";
 import "../../styles/Landing.css";
 import Nav from "../../components/NavBar";
 
@@ -7,7 +8,7 @@ export default function Landing() {
     <>
       <Nav />
       <section></section>
-      <section></section>
+      <section><Section2/></section>
 
       <section
         style={{
