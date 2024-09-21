@@ -61,6 +61,7 @@ export default function Nav() {
             width={200}
             height={100}
             style={{ padding: "1rem" }}
+            className="inv"
           ></img>
         </div>
         <div></div>
@@ -100,6 +101,10 @@ export default function Nav() {
             </button>
             <button
               style={{ color: "white", textAlign: "center", width: "100%" }}
+              onClick={() => {
+                // window.location.href = "/authed/services";
+                navi("/authed/listing/createListing");
+              }}
             >
               LIST RENTAL
             </button>
@@ -152,7 +157,7 @@ export default function Nav() {
             <button
               onClick={() => {
                 // window.location.href = "/login";
-                navi("/login");
+                navi("/authed/Dashboard");
               }}
             >
               <img src="/Cart.png" width={30} height={30}></img>
