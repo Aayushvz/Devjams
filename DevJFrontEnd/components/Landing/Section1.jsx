@@ -342,7 +342,7 @@ export default function Section1() {
       <div
         style={{
           position: "absolute",
-          top: 650,
+          top: 550,
           right: 222,
         }}
         className="image"

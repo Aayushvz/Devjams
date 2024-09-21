@@ -32,7 +32,7 @@ export default function Landing() {
       <section className="specialSect">
         <Section3 />
       </section>
-      <section>
+      <section className="specialSect">
         <Section5 />
       </section>
       <MainFooter/>

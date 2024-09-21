@@ -9,11 +9,13 @@
 
 .title{
     font-family:"Gotham";
-    font-size:41px;
+    font-size:35px;
 }
 .paragraphs{
-    font-family: 'Courier New', Courier, monospace;
-    font-size:28px;
+    background-color: white;
+    font-family: "Poppins", Courier, monospace;
+    font-size:20px;
+    font-weight: 900;
 }
 .terms{
     margin-top:200px;

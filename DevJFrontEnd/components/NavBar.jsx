@@ -10,6 +10,7 @@ export default function Nav() {
 
   async function signOut() {
     const { error } = await supabase.auth.signOut();
+    if (error) console.log("Error logging out:", error.message);
   }
 
   useEffect(() => {
@@ -26,6 +27,7 @@ export default function Nav() {
           // window.location.href("/kyc");
           navi("/kyc");
         }
+        if (error) console.log("Error logging out:", error.message);
       }
       if (session) {
         getData();
@@ -39,6 +41,7 @@ export default function Nav() {
         style={{
           display: "grid",
           gridTemplateColumns: "1fr 0.5fr 1fr 0.5fr 1fr",
+          justifyContent: "center",
           alignItems: "center",
           padding: "1rem",
         }}
@@ -49,11 +52,16 @@ export default function Nav() {
             fontSize: 64.99,
             fontFamily: "Trap",
             fontWeight: "800",
-            lineHeight: 3.84,
+            // lineHeight: 3.0,
             wordWrap: "break-word",
           }}
         >
-          Vrent
+          <img
+            src="/vrent logo.png"
+            width={200}
+            height={100}
+            style={{ padding: "1rem" }}
+          ></img>
         </div>
         <div></div>
         <div>
@@ -74,11 +82,17 @@ export default function Nav() {
           >
             <button
               style={{ color: "white", textAlign: "center", width: "100%" }}
+              onClick={() => {
+                window.location.href = "/";
+              }}
             >
               HOME
             </button>
             <button
               style={{ color: "white", textAlign: "center", width: "100%" }}
+              onClick={() => {
+                window.location.href = "/authed/rentals";
+              }}
             >
               QUICK RENTALS
             </button>
@@ -100,19 +114,47 @@ export default function Nav() {
           </div>
         </div>
         <div></div>
-        <button
-          style={{ color: "white", textAlign: "center", width: "100%" }}
-          onClick={() => {
-            if (session) {
-              signOut();
-              // setSession(null);
-            } else {
-              window.location.href = "/login";
-            }
-          }}
-        >
-          {session ? "LOGOUT" : "LOGIN"}
-        </button>
+        {session ? (
+          <button
+            style={{ color: "white", textAlign: "center", width: "100%" }}
+            onClick={() => {
+              if (session) {
+                signOut();
+                setSession(null);
+              } else {
+                window.location.href = "/login";
+              }
+            }}
+          >
+            {" "}
+            Login{" "}
+          </button>
+        ) : (
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-around",
+              width: "100%",
+              alignItems: "center",
+            }}
+          >
+            <button
+              onClick={() => {
+                window.location.href = "/register";
+              }}
+            >
+              <img src="/Acounts.png" width={30} height={30} />
+            </button>
+
+            <button
+              onClick={() => {
+                window.location.href = "/login";
+              }}
+            >
+              <img src="/Cart.png" width={30} height={30}></img>
+            </button>
+          </div>
+        )}
       </div>
     </>
   );

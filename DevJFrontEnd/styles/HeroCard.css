@@ -28,12 +28,9 @@
 .product-cards-container {
   width: 100%;
   margin-top:100px;
-  padding-left: 50px;
-  padding-right: 50px;
   display: flex;
   flex-wrap: nowrap;
   justify-content: space-evenly;
-  margin-left: 40px;
   overflow-x: auto;
 }
 
@@ -93,7 +90,7 @@
   align-items: center;
   width: 100%;
   position: relative;
-  left: 145px;
+  left: 100px;
 }
 .top-rentals {
   color: white;
@@ -149,9 +146,9 @@
   justify-content: center;
   align-items: center;
   color: white;
-  font-size: 35.74px;
+  font-size: 40.74px;
   font-family: "Poppins", sans-serif;
-  font-weight: 600;
+  font-weight: bolder;
   line-height: 53.57px;
   background: linear-gradient(90deg, #ffffff, #6e6e6e);
   -webkit-background-clip: text;

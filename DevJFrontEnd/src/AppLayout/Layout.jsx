@@ -4,9 +4,15 @@ import Nav from "../../components/NavBar";
 export default function Layout({ children }) {
   return (
     <>
-      <div>
+      <header
+        style={{
+          position: "fixed",
+          width: "100%",
+          top: 0,
+        }}
+      >
         <Nav />
-      </div>
+      </header>
       <main>{children}</main>
     </>
   );
