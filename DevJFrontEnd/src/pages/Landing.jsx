@@ -2,7 +2,7 @@ import Section3 from "../../components/Landing/Section3";
 import Section2 from "../../components/Landing/Section2";
 import Section5 from "../../components/Landing/Section5";
 import MainFooter from "../../components/Landing/MainFooter";
-
+import Section15 from "../../components/Landing/Section15";
 import "../../styles/Landing.css";
 import Nav from "../../components/NavBar";
 import Section1 from "../../components/Landing/Section1";
@@ -22,7 +22,7 @@ export default function Landing() {
       >
         <Section1 />
       </section>
-
+        <Section15/>
       <section>
         <Section2 />
       </section>

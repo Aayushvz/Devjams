@@ -1,22 +1,34 @@
-import { useSelector } from "react-redux";
+import React from 'react';
+import { useSelector } from 'react-redux';
+import '../../styles/Cart.css';
+import ProductCard from '../../components/ProductCard';
+import PaymentCard from '../../components/PaymentCard';
 
-export default function Cart() {
+const Cart = () => {
   const cart = useSelector((state) => state.cart);
-  console.log(cart.cart[0].id);
 
   if (cart.cart.length === 0) {
-    return <h1>Cart is empty</h1>;
+    return (
+    <div className="cart-empty">Your Cart is EMPTY</div>
+  );
   }
+
   return (
-    <div>
-      <h1>Cart</h1>
-      <ul>
+    <div className="cart-container">
+      {/* Product List Section */}
+      <div className="cart-products">
+        <h2>Your Cart</h2>
         {cart.cart.map((item) => (
-          <li key={item.id}>
-            {item.ProductName} - {item.Quantity}
-          </li>
+          <ProductCard key={item.id} product={item} />
         ))}
-      </ul>
+      </div>
+
+      {/* Payment Section */}
+      <div className="cart-payment">
+        <PaymentCard />
+      </div>
     </div>
   );
-}
+};
+
+export default Cart;
