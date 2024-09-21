@@ -41,10 +41,6 @@ export default function Section2() {
             <HeroCard key={product.id} product={product} />
           ))}
         </div>
-        <div className="Quote">
-          <div>You can Save Money in Two Ways</div>
-          <div>MAKE MORE or SPEND LESS</div>
-        </div>
       </div>
     </div>
   );

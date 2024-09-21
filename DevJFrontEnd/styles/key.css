@@ -1,0 +1,8 @@
+.image {
+    transition: transform 0.4s ease-in-out; /* Smooth transition for transform */
+  }
+  
+  .image:hover {
+    transform: translateX(-10px) scale(1.1);  /* Less intense skew and slight scaling */
+  }
+  

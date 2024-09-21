@@ -1,17 +1,14 @@
+import "../../styles/key.css";
 export default function Section1() {
   return (
     <>
       <div
         style={{
-          //   display: "flex",
-          //   flexDirection: "column",
-          //   justifyContent: "center",
           alignItems: "center",
           width: "100%",
           height: "70%",
           textAlign: "center",
           color: "black",
-          //   backgroundColor: "white",
           fontSize: 72,
           fontFamily: "Poppins",
           fontWeight: "600",
@@ -27,6 +24,7 @@ export default function Section1() {
             top: 0,
             left: 0,
             zIndex: -1,
+            opacity: "70%",
           }}
         />
         <div>Take Full Control Of Your</div>
@@ -317,6 +315,7 @@ export default function Section1() {
           top: 474,
           left: 121,
         }}
+        className="image"
       >
         <img src="/Group315.png" width={193} height={192} />
       </div>
@@ -326,6 +325,7 @@ export default function Section1() {
           top: 749,
           left: 352,
         }}
+        className="image"
       >
         <img src="/Group317.png" width={227} height={220} />
       </div>
@@ -335,6 +335,7 @@ export default function Section1() {
           top: 311,
           right: 313,
         }}
+        className="image"
       >
         <img src="/Group319.png" width={150} height={150} />
       </div>
@@ -344,6 +345,7 @@ export default function Section1() {
           top: 650,
           right: 222,
         }}
+        className="image"
       >
         <img src="/Group318.png" width={345} height={413} />
       </div>
