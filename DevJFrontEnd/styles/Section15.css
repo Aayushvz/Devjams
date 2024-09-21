@@ -48,7 +48,7 @@
     margin-left: 8px;
 }
 
-p {
+.p11 {
     font-size: 30px;
     background: radial-gradient(50% 50% at 50% 50%, #FFFFFF 0%, #6E6E6E 100%);
     -webkit-background-clip: text;
