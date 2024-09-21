@@ -9,6 +9,7 @@
 }
 
 .dfbar{
+padding-top:80px;
 font-family:"Poppins";
 display:flex;
 justify-content:flex-start;
@@ -25,4 +26,9 @@ align-self:flex-start;
 .para{
 width:50%;
 align-self:flex-end;
+}
+.image1{
+    padding-top:100px;
+    margin-left:100px;
+    width:90%;
 }
