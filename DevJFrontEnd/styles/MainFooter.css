@@ -1,0 +1,28 @@
+@font-face {
+    font-family: "Poppins";
+    src: url("../../styles/fonts/Poppins-Regular.ttf") format("truetype");
+}
+
+.fbar{
+    color:white;
+    background-color:black;
+}
+
+.dfbar{
+font-family:"Poppins";
+display:flex;
+justify-content:flex-start;
+flex-direction:row;
+}
+
+.contacts{
+margin-top:10px;
+margin-left:100px;
+width:50%;
+align-self:flex-start;
+
+}
+.para{
+width:50%;
+align-self:flex-end;
+}
