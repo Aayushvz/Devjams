@@ -6,6 +6,7 @@ import Login from "./pages/Login";
 import Kyc from "./pages/Kyc";
 import LogLayout from "./AppLayout/LogLayout";
 import AccountManagement from "./pages/AccountManagement";
+import Profile from "./pages/Profile";
 
 const router = createBrowserRouter([
   { path: "/", element: <Landing /> },
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
       {
         path: "/authed/Dashboard",
         element: <AccountManagement />,
+      },
+      {
+        path: "/authed/Profile",
+        element: <Profile />,
       },
     ],
   },

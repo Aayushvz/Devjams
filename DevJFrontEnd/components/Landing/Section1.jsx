@@ -1,5 +1,15 @@
+import { useState } from "react";
 import "../../styles/key.css";
+import { useNavigate } from "react-router-dom";
 export default function Section1() {
+  const [search, setSearch] = useState("Search for your needs");
+  const navigate = useNavigate();
+  const HandleSearch = (e) => {
+    e.preventDefault();
+    navigate(`/search/${search}`);
+    // console.log(search);
+  };
+
   return (
     <>
       <div
@@ -149,28 +159,31 @@ export default function Section1() {
               ></div>
             </div>
           </div>
-          <div
-            style={{
-              flex: "1 1 0",
-              height: 25,
-              justifyContent: "flex-start",
-              alignItems: "center",
-              display: "flex",
-            }}
-          >
-            <input
+          <form onSubmit={HandleSearch}>
+            <div
               style={{
-                color: "#ABB7C2",
-                fontSize: 16.76,
-                fontFamily: "Poppins",
-                fontWeight: "400",
-                wordWrap: "break-word",
-                border: "none",
-                background: "transparent",
+                flex: "1 1 0",
+                height: 25,
+                justifyContent: "flex-start",
+                alignItems: "center",
+                display: "flex",
               }}
-              value={"Search for your needs"}
-            ></input>
-          </div>
+            >
+              <input
+                style={{
+                  color: "#ABB7C2",
+                  fontSize: 16.76,
+                  fontFamily: "Poppins",
+                  fontWeight: "400",
+                  wordWrap: "break-word",
+                  border: "none",
+                  background: "transparent",
+                }}
+                value={search}
+                onChange={(e) => setSearch(e.target.value)}
+              />
+            </div>
+          </form>
           <div
             style={{
               padding: 9.31,
