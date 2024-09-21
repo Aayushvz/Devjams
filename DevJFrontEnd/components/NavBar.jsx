@@ -67,6 +67,10 @@ export default function Nav() {
             height={100}
             style={{ padding: "1rem" }}
             className="inv"
+            onClick={() => {
+              // window.location.href = "/";
+              navi("/");
+            }}
           ></img>
         </div>
         <div></div>
