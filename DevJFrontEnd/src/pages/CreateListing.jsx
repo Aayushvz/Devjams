@@ -16,19 +16,12 @@ export default function CreateListing() {
   const user = useSelector((state) => state.cart.user);
   console.log(user);
 
-  /* Fileds
-            ProductName	Quantity	Rate
-                Description	isAvailable	AgeMonths	RentType
-
-*/
-
   async function HandleSubmit(e) {
     e.preventDefault();
     let { data, error } = await supabase
       .from("Listings")
       .insert([
         {
-            
           ProductName: productName,
           Quantity: quantity,
           Rate: rate,
@@ -44,13 +37,14 @@ export default function CreateListing() {
     if (error) console.log("Error inserting data:", error.message);
     console.log(data);
   }
+  
   return (
     <div
       style={{
         width: "100%",
         height: "100vh",
-        color: "white",
-        backgroundColor: "black",
+        color: "black",
+        backgroundColor: "white",
       }}
     >
       <div
@@ -59,7 +53,6 @@ export default function CreateListing() {
           justifyContent: "center",
           alignItems: "center",
           width: "100%",
-          //   add underineg
           textDecoration: "underline",
         }}
       >
@@ -73,7 +66,7 @@ export default function CreateListing() {
           width: "100%",
           height: "100%",
           color: "black",
-          backgroundColor: "black",
+          backgroundColor: "white",
         }}
       >
         <form
@@ -95,15 +88,12 @@ export default function CreateListing() {
               justifyContent: "space-between",
               alignItems: "start",
               width: "100%",
-              color: "white",
+              color: "black",
               padding: "10px",
-              backgroundColor: "black",
+              backgroundColor: "white",
             }}
           >
             <div>
-              {/* <InputField text="Product Name" />
-              <InputField text="Quantity" />
-              <InputField text="Rate" /> */}
               <InputField
                 text="ProductName"
                 value={productName}
@@ -125,9 +115,6 @@ export default function CreateListing() {
             </div>
 
             <div>
-              {/* <InputField text="Description" />
-              <InputField text="isAvailable" />
-              <InputField text="Age (months)" /> */}
               <InputField
                 text="Description"
                 value={description}
@@ -147,9 +134,8 @@ export default function CreateListing() {
                 setState={setAge}
               />
             </div>
+
             <div>
-              {/* <InputField text="RentType" />
-              <InputField text="Image" /> */}
               <InputField
                 text="RentType"
                 value={rentType}
@@ -164,13 +150,14 @@ export default function CreateListing() {
               />
             </div>
           </div>
+
           <button
             style={{
               width: "100%",
               padding: "10px",
-              backgroundColor: "black",
-              color: "white",
-              border: "1px solid white",
+              backgroundColor: "lightgray",
+              color: "black",
+              border: "1px solid gray",
             }}
           >
             Create Listing
@@ -187,18 +174,18 @@ export const InputField = ({ text, value, type, setState }) => {
     <div
       style={{ display: "flex", flexDirection: "column", alignItems: "start" }}
     >
-      <label style={{ marginBottom: "4px", color: "white", fontWeight: 900 }}>
+      <label style={{ marginBottom: "4px", color: "black", fontWeight: 900 }}>
         {text}
       </label>
       <input
         type={type}
         style={{
-          backgroundColor: "black",
-          color: "white",
+          backgroundColor: "white",
+          color: "black",
           width: "100%",
-          border: "1px solid white",
+          border: "1px solid gray",
           padding: "20px",
-          borderRadius: "8px", // Rounded corners
+          borderRadius: "8px",
         }}
         placeholder="Enter listing details"
         value={value}
