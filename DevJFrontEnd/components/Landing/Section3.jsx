@@ -32,7 +32,7 @@ export default function Section3() {
     },
     {
       id: 3,
-      ProductName: "Textbook - Algorithms",
+      ProductName: "Textbook",
       Quantity: 20,
       Rate: 50,
       UUID: "550e8400-e29b-41d4-a716-446655440002",

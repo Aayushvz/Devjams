@@ -6,6 +6,8 @@ import Nav from "../../components/NavBar";
 import Section1 from "../../components/Landing/Section1";
 import Section25 from "../../components/Landing/Section25";
 
+import "../../styles/special.css";
+
 export default function Landing() {
   return (
     <>
@@ -25,17 +27,7 @@ export default function Landing() {
 
       <Section25 />
 
-      <section
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          width: "100%",
-          height: "100vh",
-          marginTop: "60px",
-          justifyContent: "center",
-          alignItems: "center",
-        }}
-      >
+      <section className="specialSect">
         <Section3 />
       </section>
       <section>
