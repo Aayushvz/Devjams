@@ -8,6 +8,8 @@ import LogLayout from "./AppLayout/LogLayout";
 import AccountManagement from "./pages/AccountManagement";
 import Profile from "./pages/Profile";
 import Rentals from "./pages/rentals";
+import Product from "./pages/Product";
+import Cart from "./pages/Cart";
 
 const router = createBrowserRouter([
   { path: "/", element: <Landing /> },
@@ -51,6 +53,22 @@ const router = createBrowserRouter([
     element: (
       <Layout>
         <AccountManagement />
+      </Layout>
+    ),
+  },
+  {
+    path: "/authed/product/:id",
+    element: (
+      <Layout>
+        <Product />
+      </Layout>
+    ),
+  },
+  {
+    path: "/authed/cart",
+    element: (
+      <Layout>
+        <Cart />
       </Layout>
     ),
   },

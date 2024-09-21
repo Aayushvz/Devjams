@@ -1,7 +1,9 @@
 /* eslint-disable react/prop-types */
+import { useNavigate } from "react-router-dom";
 import "../styles/ListingCard.css";
 
 export default function ListingCard({ product }) {
+  const navigate = useNavigate();
   return (
     <div className="listing-card-container">
       <div className="listing-card">
@@ -35,7 +37,10 @@ export default function ListingCard({ product }) {
           <div className="listing-card-rating">Age - {product.AgeMonths} Months</div>
           <div className="red-dot" />
           <div className="yellow-dot" />
-          <button className="listing-card-button">
+          <button className="listing-card-button" onClick={() => {
+            navigate(`/authed/product/${product.id}`);
+          }
+          }>
             <div className="listing-card-button-text">Rent it</div>
             <svg
               width="17"

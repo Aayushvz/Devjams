@@ -1,8 +1,6 @@
 import { useState, useEffect } from "react";
 import supabase from "../../utils/supabase";
 import { useNavigate } from "react-router-dom";
-import { authActions } from "../../utils/authStore";
-import { useSelector } from "react-redux";
 
 export default function Kyc() {
   const [session, setSession] = useState(null);

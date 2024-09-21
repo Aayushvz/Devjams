@@ -83,7 +83,8 @@ export default function Nav() {
             <button
               style={{ color: "white", textAlign: "center", width: "100%" }}
               onClick={() => {
-                window.location.href = "/";
+                // window.location.href = "/";
+                navi("/");
               }}
             >
               HOME
@@ -91,7 +92,8 @@ export default function Nav() {
             <button
               style={{ color: "white", textAlign: "center", width: "100%" }}
               onClick={() => {
-                window.location.href = "/authed/rentals";
+                // window.location.href = "/authed/rentals";
+                navi("/authed/rentals");
               }}
             >
               QUICK RENTALS
@@ -140,7 +142,8 @@ export default function Nav() {
           >
             <button
               onClick={() => {
-                window.location.href = "/register";
+                // window.location.href = "/authed/cart";
+                navi("/authed/cart");
               }}
             >
               <img src="/Acounts.png" width={30} height={30} />
@@ -148,7 +151,8 @@ export default function Nav() {
 
             <button
               onClick={() => {
-                window.location.href = "/login";
+                // window.location.href = "/login";
+                navi("/login");
               }}
             >
               <img src="/Cart.png" width={30} height={30}></img>
