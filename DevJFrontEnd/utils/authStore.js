@@ -12,11 +12,10 @@ const authSlice = createSlice({
         logout(state) {
             state.user = null;
         },
-        checkAuth(state) {
-            if (localStorage.getItem("user")) {
-                state.user = JSON.parse(localStorage.getItem("user"));
-            }
+        storeID(state, action) {
+            state.user = action.payload
         }
+        
     },
 });
 
