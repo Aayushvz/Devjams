@@ -6,7 +6,6 @@ import { useNavigate } from "react-router-dom";
 
 export default function Nav() {
   const [session, setSession] = useState(null);
-  const [kyc, setKyc] = useState(null);
   const navi = useNavigate();
 
   async function signOut() {
