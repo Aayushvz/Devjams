@@ -3,11 +3,13 @@ import { useState, useEffect } from "react";
 
 import supabase from "../utils/supabase";
 import { useNavigate } from "react-router-dom";
+import { setUser } from "./cart/cartslice";
+import { useDispatch } from "react-redux";
 
 export default function Nav() {
   const [session, setSession] = useState(null);
   const navi = useNavigate();
-
+  const dispatch = useDispatch();
   async function signOut() {
     const { error } = await supabase.auth.signOut();
     if (error) console.log("Error logging out:", error.message);
@@ -16,6 +18,9 @@ export default function Nav() {
   useEffect(() => {
     supabase.auth.getSession().then(({ data: { session } }) => {
       setSession(session);
+      if (session) {
+        dispatch(setUser(session.user.id));
+      }
       async function getData() {
         let { data: User, error } = await supabase
           .from("User")
@@ -34,7 +39,7 @@ export default function Nav() {
       }
       // console.log(session.user.id);
     });
-  }, [navi]);
+  }, [dispatch, navi]);
   return (
     <>
       <div
@@ -121,7 +126,7 @@ export default function Nav() {
           </div>
         </div>
         <div></div>
-        {session ? (
+        {!session ? (
           <button
             style={{ color: "white", textAlign: "center", width: "100%" }}
             onClick={() => {
