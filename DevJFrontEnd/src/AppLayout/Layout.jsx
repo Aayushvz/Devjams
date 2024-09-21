@@ -6,9 +6,7 @@ export default function Layout({ children }) {
     <>
       <header
         style={{
-          position: "fixed",
           width: "100%",
-          top: 0,
         }}
       >
         <Nav />

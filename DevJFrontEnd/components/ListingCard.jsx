@@ -6,7 +6,11 @@ export default function ListingCard({ product }) {
     <div className="listing-card-container">
       <div className="listing-card">
         <div className="listing-card-content">
-          <img className="listing-card-img" src="/test.png" alt="Product" />
+          <img
+            className="listing-card-img"
+            src={product.imgurl}
+            alt="Product"
+          />
           <div className="listing-card-svg-container">
             <svg
               width="30"
@@ -25,8 +29,10 @@ export default function ListingCard({ product }) {
             </svg>
           </div>
           <div className="listing-card-text">{product.ProductName}</div>
-          <div className="listing-card-price">Price - 500/h</div>
-          <div className="listing-card-rating">Rating - 4/5</div>
+          <div className="listing-card-price">
+            Price - {product.Rate} INR {product.RentType}
+          </div>
+          <div className="listing-card-rating">Age - {product.AgeMonths} Months</div>
           <div className="red-dot" />
           <div className="yellow-dot" />
           <button className="listing-card-button">

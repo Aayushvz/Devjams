@@ -32,7 +32,7 @@ export default function Nav() {
       if (session) {
         getData();
       }
-      console.log(session.user.id);
+      // console.log(session.user.id);
     });
   }, [navi]);
   return (

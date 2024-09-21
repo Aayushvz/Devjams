@@ -7,6 +7,7 @@ import Kyc from "./pages/Kyc";
 import LogLayout from "./AppLayout/LogLayout";
 import AccountManagement from "./pages/AccountManagement";
 import Profile from "./pages/Profile";
+import Rentals from "./pages/rentals";
 
 const router = createBrowserRouter([
   { path: "/", element: <Landing /> },
@@ -20,18 +21,38 @@ const router = createBrowserRouter([
   },
   { path: "/kyc", element: <Kyc /> },
   {
-    path: "/authed",
-    element: <Layout />,
+    path: "/authed/rentals",
+    element: (
+      <Layout>
+        <Rentals />
+      </Layout>
+    ),
     children: [
       {
-        path: "/authed/Dashboard",
-        element: <AccountManagement />,
-      },
-      {
-        path: "/authed/Profile",
-        element: <Profile />,
+        path: ":search",
+        element: (
+          <Layout>
+            <Rentals />
+          </Layout>
+        ),
       },
     ],
+  },
+  {
+    path: "/authed/Profile",
+    element: (
+      <Layout>
+        <Profile />
+      </Layout>
+    ),
+  },
+  {
+    path: "/authed/Dashboard",
+    element: (
+      <Layout>
+        <AccountManagement />
+      </Layout>
+    ),
   },
 ]);
 
