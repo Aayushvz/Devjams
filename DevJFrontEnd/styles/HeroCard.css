@@ -9,15 +9,19 @@
 
 .page2 {
   width: 100%;
+  padding-top:100px;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
   padding: 20px;
-  background: #020202;
+  background-color:black;
+  background-image:url("/halftonb.png");
+  background-size:cover;
 }
 
 .product-cards-container {
   width: 100%;
+  margin-top:100px;
   padding-left: 50px;
   padding-right: 50px;
   display: flex;
@@ -77,6 +81,7 @@
 }
 
 .header1 {
+  margin-top:80px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
