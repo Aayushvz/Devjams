@@ -1,0 +1,24 @@
+@font-face {
+    font-family: "Gotham";
+    src: url("../../styles/fonts/Gotham-Bold.otf") format("opentype");
+}
+@font-face {
+    font-family: "Poppins";
+    src: url("../../styles/fonts/Poppins-Regular.ttf") format("truetype");
+  }
+
+.title{
+    font-family:"Gotham";
+    font-size:50px;
+}
+.paragraphs{
+    font-family: 'Courier New', Courier, monospace;
+    font-size:30px;
+}
+.terms{
+    margin-top:100px;
+    padding-left:100px;
+    padding-right:100px;
+    padding-bottom:50px;
+
+}
