@@ -146,7 +146,8 @@ export default function Section3() {
     async function getData() {
       let { data: Listings, error } = await supabase
         .from("Listings")
-        .select("*");
+        .select("*")
+        .range(0, 10);
       if (error) console.log("Error fetching data:", error.message);
       setData(Listings);
     }

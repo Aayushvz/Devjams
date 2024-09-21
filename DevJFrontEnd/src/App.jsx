@@ -10,6 +10,7 @@ import Profile from "./pages/Profile";
 import Rentals from "./pages/rentals";
 import Product from "./pages/Product";
 import Cart from "./pages/Cart";
+import CreateListing from "./pages/CreateListing";
 
 const router = createBrowserRouter([
   { path: "/", element: <Landing /> },
@@ -69,6 +70,14 @@ const router = createBrowserRouter([
     element: (
       <Layout>
         <Cart />
+      </Layout>
+    ),
+  },
+  {
+    path: "/authed/listing/createListing",
+    element: (
+      <Layout>
+        <CreateListing />
       </Layout>
     ),
   },
