@@ -15,9 +15,8 @@ export default function MainFooter() {
 
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, atque earum? Inventore quae provident debitis reiciendis odio culpa, praesentium itaque, atque in veniam sapiente tempora? Enim corporis nobis itaque pariatur.
             </p>
-            {/* <img src="/footer.png"></img> */}
             </div>
-            {/* <img className="image" src="/footer.png"></img> */}
+            <img className="image1" src="/footer.png"></img>
         </div>
     );
 }
