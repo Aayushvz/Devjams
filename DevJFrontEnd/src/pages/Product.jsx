@@ -3,12 +3,15 @@ import supabase from "../../utils/supabase";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { addItem } from "../../components/cart/cartslice";
+import { useNavigate } from "react-router-dom";
 
 export default function Product() {
   const { id } = useParams();
   const [data, setData] = useState(null);
   const cart = useSelector((state) => state.cart);
+  const user = useSelector((state) => state.cart.user);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   console.log(cart);
   useEffect(() => {
     async function getData() {
@@ -24,6 +27,7 @@ export default function Product() {
 
   return (
     <>
+      {!user && navigate("/login")}
       {data ? (
         <div
           style={{
