@@ -81,7 +81,7 @@ export default function Section1() {
         }}
         className="image"
       >
-        <img src="/Group318.png" width={345} height={413} />
+        <img src="/Group318.png" width={345} height={363} />
       </div>
     </>
   );

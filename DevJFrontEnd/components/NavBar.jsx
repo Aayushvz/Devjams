@@ -49,10 +49,14 @@ export default function Nav() {
           justifyContent: "center",
           alignItems: "center",
           padding: "1rem",
+          marginBottom: "4rem",
         }}
       >
         <div
           style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
             color: "black",
             fontSize: 64.99,
             fontFamily: "Trap",
@@ -63,9 +67,8 @@ export default function Nav() {
         >
           <img
             src="/vrent logo.png"
-            width={200}
-            height={100}
-            style={{ padding: "1rem" }}
+            width={150}
+            height={50}
             className="inv"
             onClick={() => {
               // window.location.href = "/";
@@ -119,6 +122,10 @@ export default function Nav() {
             </button>
             <button
               style={{ color: "white", textAlign: "center", width: "100%" }}
+              onClick={() => {
+                // window.location.href = "/authed/services";
+                navi("/authed/listing/createListing");
+              }}
             >
               LIST SERVICES
             </button>

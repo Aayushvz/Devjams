@@ -9,6 +9,7 @@ import Section1 from "../../components/Landing/Section1";
 import Section25 from "../../components/Landing/Section25";
 
 import "../../styles/special.css";
+import SectionI from "../../components/Landing/SectionI";
 
 export default function Landing() {
   return (
@@ -22,7 +23,7 @@ export default function Landing() {
       >
         <Section1 />
       </section>
-        <Section15/>
+      <Section15 />
       <section>
         <Section2 />
       </section>
@@ -33,9 +34,12 @@ export default function Landing() {
         <Section3 />
       </section>
       <section className="specialSect">
+        <SectionI />
+      </section>
+      <section className="specialSect">
         <Section5 />
       </section>
-      <MainFooter/>
+      <MainFooter />
     </>
   );
 }
