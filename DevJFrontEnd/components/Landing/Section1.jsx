@@ -17,7 +17,7 @@ export default function Section1() {
         }}
       >
         <img
-          src="/gridd.png"
+          src="/lul_1.gif"
           width={"100%"}
           height={"100%"}
           style={{
