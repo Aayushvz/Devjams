@@ -1,0 +1,57 @@
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .input-container {
+    display: flex;
+    align-items: center;
+    background-color: #181818; /* Dark background */
+    border-radius: 20px;
+    padding: 10px 15px;
+    width: 400px; /* Adjust width as needed */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .input-container input {
+    flex-grow: 1;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #d9d9d9; /* Light text color */
+    font-size: 16px;
+  }
+  
+  .filter-icon,
+  .icon-center,
+  .icon-right {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 18px;
+  }
+  
+  .filter-icon::before {
+    content: "\2630"; /* FontAwesome or Unicode filter icon */
+    color: #d9d9d9; /* Light gray color */
+  }
+  
+  .icon-center::before {
+    content: "\25A3"; /* Unicode for the center square icon */
+    color: #d9d9d9;
+  }
+  
+  .icon-right {
+    background-color: #66ff00; /* Bright green circle */
+    border-radius: 50%;
+    padding: 5px;
+  }
+  
+  .icon-right::before {
+    content: "\1F5A8"; /* Unicode for printer icon */
+    color: #ffffff;
+    font-size: 16px;
+  }
+  

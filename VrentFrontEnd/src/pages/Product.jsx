@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import supabase from "../../utils/supabase";
+import supabase from "../utils/supabase";
 import { useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { addItem } from "../../components/cart/cartslice";
+import { addItem } from "../components/cart/cartslice";
 import { useNavigate } from "react-router-dom";
 
 export default function Product() {

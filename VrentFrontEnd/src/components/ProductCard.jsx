@@ -1,19 +1,7 @@
-import React, { useState } from "react";
+import PropTypes from 'prop-types';
 import "../styles/ProductCard.css";
 
 const ProductCard = ({ product }) => {
-  const [quantity, setQuantity] = useState(1);
-
-  const handleIncrement = () => {
-    setQuantity((prevQuantity) => prevQuantity + 1);
-  };
-
-  const handleDecrement = () => {
-    if (quantity > 1) {
-      setQuantity((prevQuantity) => prevQuantity - 1);
-    }
-  };
-
   const handleDelete = () => {
     // Logic to remove item from cart
     console.log("Item removed from cart");
@@ -38,6 +26,15 @@ const ProductCard = ({ product }) => {
       </div>
     </div>
   );
+};
+
+ProductCard.propTypes = {
+  product: PropTypes.shape({
+    imgurl: PropTypes.string.isRequired,
+    ProductName: PropTypes.string.isRequired,
+    Description: PropTypes.string.isRequired,
+    Rate: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired
+  }).isRequired
 };
 
 export default ProductCard;

@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import supabase from "../../utils/supabase";
-import ListingCard from "../../components/ListingCard";
-import "../../styles/Rentals.css";
-import SearchBar from "../../components/io/SearchBar";
+import supabase from "../utils/supabase";
+import ListingCard from "../components/ListingCard";
+import "../styles/Rentals.css";
+import SearchBar from "../components/io/SearchBar";
 import { useParams } from "react-router-dom";
 
 export default function Rentals() {

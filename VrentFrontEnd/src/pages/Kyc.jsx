@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import supabase from "../../utils/supabase";
+import supabase from "../utils/supabase";
 import { useNavigate } from "react-router-dom";
 
 export default function Kyc() {
@@ -20,8 +20,9 @@ export default function Kyc() {
 
     return () => subscription.unsubscribe();
   }, []);
+  
   async function HandleSubmit() {
-    const { data, error } = await supabase
+    const { error } = await supabase
       .from("User")
       .insert([
         {

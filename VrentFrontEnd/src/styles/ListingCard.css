@@ -1,0 +1,132 @@
+.listing-card-container {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .listing-card {
+    height: 337px;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 72px;
+    display: flex;
+  }
+  
+  .listing-card-content {
+    width: 269px;
+    height: 337px;
+    position: relative;
+    background: white;
+    border-top-left-radius: 14px;
+    overflow: hidden;
+    border: 2px solid rgba(0, 0, 0, 0.76);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .listing-card-content:hover {
+    background: black; /* Change background on hover */
+    box-shadow: 0 4px 15px rgba(0, 255, 0, 0.5), 0 0 25px rgba(0, 255, 0, 0.3); /* Green gradient-like shadow */
+  }
+  
+  .listing-card-content:hover .listing-card-text,
+  .listing-card-content:hover .listing-card-price,
+  .listing-card-content:hover .listing-card-rating {
+    color: white; /* Change text color to white on hover */
+  }
+  
+  .listing-card-content:hover .listing-card-button {
+    background: green; /* Change button background on card hover */
+  }
+  
+  .listing-card-img {
+    width: 281.6px;
+    height: 187.66px;
+    position: absolute;
+    left: -6px;
+    top: 0;
+  }
+  
+  .listing-card-svg-container {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    left: 228px;
+    top: 13px;
+  }
+  
+  .listing-card-text {
+    position: absolute;
+    left: 35px;
+    top: 208px;
+    color: black; /* Default text color */
+    font-size: 23.8px;
+    font-family: "Gotham";
+    font-weight: 700;
+    word-wrap: break-word;
+  }
+  
+  .listing-card-price {
+    position: absolute;
+    left: 49px;
+    top: 236px;
+    color: black; /* Default price color */
+    font-size: 10.48px;
+    font-family: "Gotham";
+    font-weight: 700;
+    word-wrap: break-word;
+  }
+  
+  .listing-card-rating {
+    position: absolute;
+    left: 49px;
+    top: 251px;
+    color: black; /* Default rating color */
+    font-size: 10.48px;
+    font-family: "Gotham";
+    font-weight: 400;
+    word-wrap: break-word;
+  }
+  
+  .red-dot,
+  .yellow-dot {
+    width: 9px;
+    height: 9px;
+    position: absolute;
+    border-radius: 9999px;
+  }
+  
+  .red-dot {
+    left: 37px;
+    top: 236px;
+    background: #ff0000;
+  }
+  
+  .yellow-dot {
+    left: 37px;
+    top: 251px;
+    background: #ffb800;
+  }
+  
+  .listing-card-button {
+    width: 178.88px;
+    height: 36.98px;
+    padding: 7.74px 12.9px;
+    position: absolute;
+    left: 35.56px;
+    top: 275.01px;
+    background: #060606; /* Default button background */
+    border-radius: 4.3px;
+    justify-content: center;
+    align-items: center;
+    gap: 8.6px;
+    display: inline-flex;
+    transition: background 0.3s ease; /* Smooth background transition */
+  }
+  
+  .listing-card-button-text {
+    color: white; /* Button text color */
+    font-size: 20.47px;
+    font-family: "Gotham";
+    font-weight: 700;
+    word-wrap: break-word;
+  }
+  

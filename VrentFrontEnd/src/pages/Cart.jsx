@@ -1,8 +1,7 @@
-import React from 'react';
 import { useSelector } from 'react-redux';
-import '../../styles/Cart.css';
-import ProductCard from '../../components/ProductCard';
-import PaymentCard from '../../components/PaymentCard';
+import '../styles/Cart.css';
+import ProductCard from '../components/ProductCard';
+import PaymentCard from '../components/PaymentCard';
 
 const Cart = () => {
   const cart = useSelector((state) => state.cart);

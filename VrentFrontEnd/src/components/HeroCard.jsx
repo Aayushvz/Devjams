@@ -1,5 +1,5 @@
-import React from 'react';
 import "../styles/HeroCard.css";
+import PropTypes from 'prop-types';
 
 export default function HeroCard({ product }) {
   return (
@@ -18,3 +18,11 @@ export default function HeroCard({ product }) {
     </div>
   );
 }
+
+HeroCard.propTypes = {
+  product: PropTypes.shape({
+    imageSrc: PropTypes.string.isRequired,
+    title: PropTypes.string.isRequired,
+    price: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired
+  }).isRequired
+};

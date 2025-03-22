@@ -1,10 +1,10 @@
 import "./App.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Layout from "./AppLayout/Layout";
+import Layout from "./layouts/Layout";
 import Landing from "./pages/Landing";
 import Login from "./pages/Login";
 import Kyc from "./pages/Kyc";
-import LogLayout from "./AppLayout/LogLayout";
+import LogLayout from "./layouts/LogLayout";
 import AccountManagement from "./pages/AccountManagement";
 import Profile from "./pages/Profile";
 import Rentals from "./pages/rentals";
