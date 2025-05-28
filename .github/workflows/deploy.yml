@@ -34,6 +34,7 @@ jobs:
         run: npm run build
         env:
           VITE_BASE_URL: '/Vrent/'
+          NODE_ENV: 'production'
       
       - name: Setup Pages
         uses: actions/configure-pages@v4
