@@ -1,5 +1,5 @@
 import "./App.css";
-import { createBrowserRouter, RouterProvider, Navigate } from "react-router-dom";
+import { createHashRouter, RouterProvider, Navigate } from "react-router-dom";
 import Layout from "./layouts/Layout";
 import Landing from "./pages/Landing";
 import Login from "./pages/Login";
@@ -16,7 +16,7 @@ import ErrorBoundary from "./components/ErrorBoundary";
 // Determine if we're in development or production
 const isDevelopment = import.meta.env.DEV;
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <Landing />,
