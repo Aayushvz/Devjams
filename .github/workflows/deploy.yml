@@ -33,7 +33,6 @@ jobs:
       - name: Build
         run: npm run build
         env:
-          VITE_BASE_URL: '/Vrent/'
           NODE_ENV: 'production'
       
       - name: Setup Pages

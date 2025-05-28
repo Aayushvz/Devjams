@@ -13,9 +13,6 @@ import Cart from "./pages/Cart";
 import CreateListing from "./pages/CreateListing";
 import ErrorBoundary from "./components/ErrorBoundary";
 
-// Determine if we're in development or production
-const isDevelopment = import.meta.env.DEV;
-
 const router = createHashRouter([
   {
     path: "/",
@@ -106,9 +103,7 @@ const router = createHashRouter([
     element: <Navigate to="/" replace />,
     errorElement: <ErrorBoundary />
   }
-], {
-  basename: isDevelopment ? undefined : '/Vrent'
-});
+]);
 
 function App() {
   return <RouterProvider router={router} />;
