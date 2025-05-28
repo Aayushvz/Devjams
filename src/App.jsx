@@ -81,7 +81,9 @@ const router = createBrowserRouter([
       </Layout>
     ),
   },
-]);
+], {
+  basename: '/Vrent'
+});
 
 function App() {
   return <RouterProvider router={router} />;
