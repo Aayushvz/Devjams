@@ -9,7 +9,7 @@ export default function ErrorBoundary() {
     // If there's no specific error, redirect to home after a short delay
     if (!error) {
       const timer = setTimeout(() => {
-        navigate('/');
+        navigate('/', { replace: true });
       }, 1000);
       return () => clearTimeout(timer);
     }

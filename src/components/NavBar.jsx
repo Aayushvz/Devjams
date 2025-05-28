@@ -136,7 +136,7 @@ export default function Nav() {
                 signOut();
                 setSession(null);
               } else {
-                window.location.href = "/login";
+                navi("/login");
               }
             }}
           >
