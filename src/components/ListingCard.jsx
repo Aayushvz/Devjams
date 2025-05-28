@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useNavigate } from "react-router-dom";
 import "../styles/ListingCard.css";
+import { getImageUrl } from "../utils/imageUtils";
 
 export default function ListingCard({ product }) {
   const navigate = useNavigate();
@@ -10,7 +11,7 @@ export default function ListingCard({ product }) {
         <div className="listing-card-content">
           <img
             className="listing-card-img"
-            src={product.imgurl}
+            src={getImageUrl(product.imgurl)}
             alt="Product"
           />
           <div className="listing-card-svg-container">

@@ -5,25 +5,25 @@ export default function Section2() {
   const products = [
     {
       id: 1,
-      imageSrc: "/cycle.png",
+      imageSrc: "/Vrent/cycle.png",
       title: "Bicycle",
       price: 300,
     },
     {
       id: 2,
-      imageSrc: "/drive.png",
+      imageSrc: "/Vrent/drive.png",
       title: "Hard Drive",
       price: 500,
     },
     {
       id: 3,
-      imageSrc: "/jwell.png",
+      imageSrc: "/Vrent/jwell.png",
       title: "Jewellery",
       price: 700,
     },
     {
       id: 4,
-      imageSrc: "/laptop.png",
+      imageSrc: "/Vrent/laptop.png",
       title: "Laptop",
       price: 1000,
     },

@@ -1,3 +1,5 @@
+import { getImageUrl } from "../../utils/imageUtils";
+
 export default function SectionI() {
   return (
     <>
@@ -32,8 +34,8 @@ export default function SectionI() {
             textDecoration: "underline",
           }}
         >
-          <img src="/pi4.png" width={650} height={252} />
-          <img src="/pi4.png" width={650} height={252} />
+          <img src={getImageUrl("pi4.png")} width={650} height={252} />
+          <img src={getImageUrl("pi4.png")} width={650} height={252} />
         </div>
         <div
           style={{
@@ -44,8 +46,8 @@ export default function SectionI() {
             textDecoration: "underline",
           }}
         >
-          <img src="/pi4.png" width={650} height={252} />
-          <img src="/pi4.png" width={650} height={252} />
+          <img src={getImageUrl("pi4.png")} width={650} height={252} />
+          <img src={getImageUrl("pi4.png")} width={650} height={252} />
         </div>
       </div>
     </>

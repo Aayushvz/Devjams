@@ -29,7 +29,6 @@ export default function Nav() {
 
         if (User.length == 0) {
           console.log(User);
-          // window.location.href("/kyc");
           navi("/kyc");
         }
         if (error) console.log("Error logging out:", error.message);
@@ -37,7 +36,6 @@ export default function Nav() {
       if (session) {
         getData();
       }
-      // console.log(session.user.id);
     });
   }, [dispatch, navi]);
   return (
@@ -61,20 +59,17 @@ export default function Nav() {
             fontSize: 64.99,
             fontFamily: "Trap",
             fontWeight: "800",
-            // lineHeight: 3.0,
             wordWrap: "break-word",
           }}
         >
           <img
-            src="/vrent logo.png"
+            src="/Vrent/vrent logo.png"
             width={150}
             height={50}
             className="inv"
-            onClick={() => {
-              // window.location.href = "/";
-              navi("/");
-            }}
-          ></img>
+            onClick={() => navi("/")}
+            alt="Vrent Logo"
+          />
         </div>
         <div></div>
         <div>
@@ -96,7 +91,6 @@ export default function Nav() {
             <button
               style={{ color: "white", textAlign: "center", width: "100%" }}
               onClick={() => {
-                // window.location.href = "/";
                 navi("/");
               }}
             >
@@ -105,7 +99,6 @@ export default function Nav() {
             <button
               style={{ color: "white", textAlign: "center", width: "100%" }}
               onClick={() => {
-                // window.location.href = "/authed/rentals";
                 navi("/authed/rentals");
               }}
             >
@@ -114,7 +107,6 @@ export default function Nav() {
             <button
               style={{ color: "white", textAlign: "center", width: "100%" }}
               onClick={() => {
-                // window.location.href = "/authed/services";
                 navi("/authed/listing/createListing");
               }}
             >
@@ -123,7 +115,6 @@ export default function Nav() {
             <button
               style={{ color: "white", textAlign: "center", width: "100%" }}
               onClick={() => {
-                // window.location.href = "/authed/services";
                 navi("/authed/listing/createListing");
               }}
             >
@@ -149,8 +140,7 @@ export default function Nav() {
               }
             }}
           >
-            {" "}
-            Login{" "}
+            Login
           </button>
         ) : (
           <div
@@ -163,20 +153,18 @@ export default function Nav() {
           >
             <button
               onClick={() => {
-                // window.location.href = "/authed/cart";
                 navi("/authed/cart");
               }}
             >
-              <img src="/Acounts.png" width={30} height={30} />
+              <img src="/Vrent/Acounts.png" width={30} height={30} alt="Account" />
             </button>
 
             <button
               onClick={() => {
-                // window.location.href = "/login";
                 navi("/authed/Dashboard");
               }}
             >
-              <img src="/Cart.png" width={30} height={30}></img>
+              <img src="/Vrent/Cart.png" width={30} height={30} alt="Cart" />
             </button>
           </div>
         )}

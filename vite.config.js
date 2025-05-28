@@ -44,12 +44,23 @@ export default defineConfig({
   build: {
     outDir: "dist",
     sourcemap: true,
+    assetsDir: "assets",
     rollupOptions: {
       output: {
         manualChunks: {
           vendor: ["react", "react-dom", "react-router-dom"],
         },
+        assetFileNames: (assetInfo) => {
+          if (assetInfo.name === 'style.css') return 'assets/[name][extname]';
+          return 'assets/[name]-[hash][extname]';
+        },
       },
     },
+    copyPublicDir: true,
   },
+  publicDir: 'public',
+  optimizeDeps: {
+    include: ['react', 'react-dom', 'react-router-dom'],
+  },
+  assetsInclude: ['**/*.png', '**/*.jpg', '**/*.jpeg', '**/*.gif', '**/*.svg'],
 });

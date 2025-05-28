@@ -21,7 +21,7 @@
   gap: 20px;
   padding: 20px;
   background-color:black;
-  background-image:url("/halftonb.png");
+  background-image:url("/Vrent/halftonb.png");
   background-size:cover;
 }
 
@@ -158,6 +158,6 @@
 
 .QuoteContainer {
   background-color:black;
-  background-image:url("/halftonb.png");
+  background-image:url("/Vrent/halftonb.png");
   background-size:cover;
 }

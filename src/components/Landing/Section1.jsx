@@ -1,5 +1,6 @@
 import "../../styles/key.css";
 import SearchBar from "../io/SearchBar";
+
 export default function Section1() {
   return (
     <>
@@ -17,7 +18,7 @@ export default function Section1() {
         }}
       >
         <img
-          src="/lul_1.gif"
+          src="/Vrent/lul_1.gif"
           width={"100%"}
           height={"100%"}
           style={{
@@ -27,6 +28,7 @@ export default function Section1() {
             zIndex: -1,
             opacity: "70%",
           }}
+          alt="background"
         />
         <div>Take Full Control Of Your</div>
         <div>Personal Needs at VIT</div>
@@ -41,7 +43,7 @@ export default function Section1() {
         }}
         className="image"
       >
-        <img src="/Group316.png" width={111} height={116} />
+        <img src="/Vrent/Group316.png" width={111} height={116} alt="Group316" />
       </div>
       <div
         style={{
@@ -51,7 +53,7 @@ export default function Section1() {
         }}
         className="image"
       >
-        <img src="/Group315.png" width={193} height={192} />
+        <img src="/Vrent/Group315.png" width={193} height={192} alt="Group315" />
       </div>
       <div
         style={{
@@ -61,7 +63,7 @@ export default function Section1() {
         }}
         className="image"
       >
-        <img src="/Group317.png" width={300} height={280} />
+        <img src="/Vrent/Group317.png" width={300} height={280} alt="Group317" />
       </div>
       <div
         style={{
@@ -71,7 +73,7 @@ export default function Section1() {
         }}
         className="image"
       >
-        <img src="/Group319.png" width={150} height={150} />
+        <img src="/Vrent/Group319.png" width={150} height={150} alt="Group319" />
       </div>
       <div
         style={{
@@ -81,7 +83,7 @@ export default function Section1() {
         }}
         className="image"
       >
-        <img src="/Group318.png" width={345} height={363} />
+        <img src="/Vrent/Group318.png" width={345} height={363} alt="Group318" />
       </div>
     </>
   );

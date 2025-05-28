@@ -1,5 +1,5 @@
 import "./App.css";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, Navigate } from "react-router-dom";
 import Layout from "./layouts/Layout";
 import Landing from "./pages/Landing";
 import Login from "./pages/Login";
@@ -11,9 +11,17 @@ import Rentals from "./pages/rentals";
 import Product from "./pages/Product";
 import Cart from "./pages/Cart";
 import CreateListing from "./pages/CreateListing";
+import ErrorBoundary from "./components/ErrorBoundary";
+
+// Determine if we're in development or production
+const isDevelopment = import.meta.env.DEV;
 
 const router = createBrowserRouter([
-  { path: "/", element: <Landing /> },
+  {
+    path: "/",
+    element: <Landing />,
+    errorElement: <ErrorBoundary />
+  },
   {
     path: "/login",
     element: (
@@ -21,8 +29,13 @@ const router = createBrowserRouter([
         <Login />
       </LogLayout>
     ),
+    errorElement: <ErrorBoundary />
   },
-  { path: "/kyc", element: <Kyc /> },
+  { 
+    path: "/kyc", 
+    element: <Kyc />,
+    errorElement: <ErrorBoundary />
+  },
   {
     path: "/authed/rentals",
     element: (
@@ -30,6 +43,7 @@ const router = createBrowserRouter([
         <Rentals />
       </Layout>
     ),
+    errorElement: <ErrorBoundary />,
     children: [
       {
         path: ":search",
@@ -38,6 +52,7 @@ const router = createBrowserRouter([
             <Rentals />
           </Layout>
         ),
+        errorElement: <ErrorBoundary />
       },
     ],
   },
@@ -48,6 +63,7 @@ const router = createBrowserRouter([
         <Profile />
       </Layout>
     ),
+    errorElement: <ErrorBoundary />
   },
   {
     path: "/authed/Dashboard",
@@ -56,6 +72,7 @@ const router = createBrowserRouter([
         <AccountManagement />
       </Layout>
     ),
+    errorElement: <ErrorBoundary />
   },
   {
     path: "/authed/product/:id",
@@ -64,6 +81,7 @@ const router = createBrowserRouter([
         <Product />
       </Layout>
     ),
+    errorElement: <ErrorBoundary />
   },
   {
     path: "/authed/cart",
@@ -72,6 +90,7 @@ const router = createBrowserRouter([
         <Cart />
       </Layout>
     ),
+    errorElement: <ErrorBoundary />
   },
   {
     path: "/authed/listing/createListing",
@@ -80,9 +99,15 @@ const router = createBrowserRouter([
         <CreateListing />
       </Layout>
     ),
+    errorElement: <ErrorBoundary />
   },
+  {
+    path: "*",
+    element: <Navigate to="/" replace />,
+    errorElement: <ErrorBoundary />
+  }
 ], {
-  basename: '/Vrent'
+  basename: isDevelopment ? undefined : '/Vrent'
 });
 
 function App() {
