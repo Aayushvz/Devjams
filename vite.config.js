@@ -10,6 +10,7 @@ const __dirname = path.dirname(__filename);
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: '/Vrent/',
   plugins: [
     react(),
     eslint({
